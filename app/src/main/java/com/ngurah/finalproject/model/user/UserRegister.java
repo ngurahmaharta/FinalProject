@@ -1,4 +1,4 @@
-package com.ngurah.finalproject.models;
+package com.ngurah.finalproject.model.user;
 
 import com.google.gson.annotations.SerializedName;
 

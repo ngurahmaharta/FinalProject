@@ -9,11 +9,6 @@
         android:icon="@drawable/ic_baseline_home"
         app:showAsAction="always|withText" />
     <item
-        android:id="@+id/tab_profile"
-        android:title="Profile"
-        android:icon="@drawable/ic_baseline_person"
-        app:showAsAction="always|withText" />
-    <item
         android:id="@+id/tab_bus"
         android:title="Bus"
         android:icon="@drawable/ic_baseline_directions_bus"
@@ -24,4 +19,9 @@
         android:title="Agency"
         android:icon="@drawable/ic_baseline_business_center"
         app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/tab_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_person_pin_2"
+        app:showAsAction="always|withText" />
 </menu>

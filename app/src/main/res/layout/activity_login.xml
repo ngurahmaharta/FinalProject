@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/bus_illustration"
+            android:src="@drawable/ic_bus_illustration"
             android:layout_marginHorizontal="50dp"/>
         <RelativeLayout
             android:layout_width="fill_parent"

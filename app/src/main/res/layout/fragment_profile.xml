@@ -10,50 +10,63 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         style="@style/loginParent">
         <RelativeLayout style="@style/loginParent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:weightSum="1">
-
-                <LinearLayout
-                    style="@style/parent"
-                    android:layout_gravity="center|bottom"
-                    android:layout_weight="0.25"
-                    android:background="@drawable/login_shape_bk"
-                    android:orientation="vertical">
-                    <ImageView
-                        style="@style/parent"
-                        android:background="@drawable/ic_login_bk"
-                        android:contentDescription="Login Background" />
-                </LinearLayout>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:id="@+id/layContent"
+                android:background="@drawable/profile_bk">
 
-                <androidx.cardview.widget.CardView
-                    style="@style/loginCard"
-                    app:cardCornerRadius="@dimen/loginCardRadius"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="@dimen/signup_text_margin_top"
-                    android:background="@android:color/white"
-                    android:elevation="5dp"
-                    android:padding="8dp">
-                    <LinearLayout
-                        style="@style/linearParent"
-                        android:layout_gravity="center"
-                        android:padding="@dimen/loginViewsMargin">
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:paddingTop="40dp"
+                    android:paddingBottom="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:src="@drawable/profile_round"/>
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="28dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="user@email.com"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0871 2345 6789"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="50dp"/>
+
+                <Button
+                    android:id="@+id/bLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/White"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Log out"
+                    />
+
             </LinearLayout>
+
         </RelativeLayout>
     </ScrollView>
 </FrameLayout>

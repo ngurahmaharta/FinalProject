@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:src="@drawable/bus_illustration"
+            android:src="@drawable/ic_order_illustrator"
             android:adjustViewBounds="true"
             android:layout_centerInParent="true"/>
         <TextView
@@ -32,7 +32,7 @@
             android:text="BRS"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
-            android:textColor="@color/Pink1"
+            android:textColor="@color/MidnightBlue"
             android:layout_marginHorizontal="15dp"
             android:textSize="50sp" />
         <TextView
@@ -44,7 +44,7 @@
             android:text="Bus Reservation System"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
-            android:textColor="@color/Pink3"
+            android:textColor="@color/DodgerBlue"
             android:layout_marginHorizontal="15dp"
             android:textSize="20sp" />
     </LinearLayout>

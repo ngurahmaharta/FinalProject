@@ -3,7 +3,7 @@ package com.ngurah.finalproject.rest;
 import com.ngurah.finalproject.models.ResponLogin;
 import com.ngurah.finalproject.models.User;
 import com.ngurah.finalproject.models.UserLogin;
-import com.ngurah.finalproject.models.UserRegister;
+import com.ngurah.finalproject.model.user.UserRegister;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button bLogin;
     private Boolean CheckEditText;
     private MySession session;
-    private TextView txtRegister;
+    private TextView tvRegister;
 
     private BaseApiService baseApiService;
     private User listUser;
@@ -63,7 +63,13 @@ public class LoginActivity extends AppCompatActivity {
         edUser = findViewById(R.id.edEmail);
         edPass = findViewById(R.id.edPass);
         bLogin = findViewById(R.id.bLogin);
-        txtRegister = findViewById(R.id.tvRegister);
+        tvRegister = findViewById(R.id.tvRegister);
+
+        tvRegister = findViewById(R.id.tvRegister);
+        tvRegister.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+            startActivity(i);
+        });
 
         //Checking Emulator
         if (customUtils.isEmulator()){
@@ -102,12 +108,12 @@ public class LoginActivity extends AppCompatActivity {
         bLogin.setOnClickListener(view -> cekLoginTwo());
 
         //Register
-        txtRegister.setOnClickListener(v -> cekRegister());
+//        tvRegister.setOnClickListener(v -> cekRegister());
     }
 
-    private void cekRegister() {
-
-    }
+//    private void cekRegister() {
+//
+//    }
 
     //Check Edit Text
     public void CheckEditTextIsEmptyOrNot(){
@@ -174,7 +180,7 @@ public class LoginActivity extends AppCompatActivity {
                                 generateUserList();
                             }else {
                                 Log.d("Login : ", response.message().toString());
-                                Toast.makeText(getApplicationContext(), "Username/Passsword Tidak Sesuai !!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Email/Passsword Tidak Sesuai !!", Toast.LENGTH_SHORT).show();
                             }
                         }catch (Exception e){
                             e.printStackTrace();

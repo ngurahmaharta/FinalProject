@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:cropToPadding="true"
-            android:src="@drawable/bus_illustration"
+            android:src="@drawable/ic_login_illustratition"
             android:layout_marginHorizontal="70dp"/>
 
 
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                    android:layout_marginTop="10dp">
 
                     <EditText
                         android:id="@+id/edFirstName"
@@ -84,92 +84,72 @@
                         android:maxLines="1"/>
                 </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputEmail"
-                    android:layout_width="match_parent"
+                <EditText
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/signup_text_margin_top">
-                    <EditText
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_baseline_email"
-                        android:drawableTint="@color/SlateGray"
-                        android:drawablePadding="16sp"
-                        android:singleLine="true"
-                        android:hint="Email"
-                        android:textSize="@dimen/defaultEditTextSize"
-                        android:id="@+id/edEmail"
-                        android:fontFamily="sans-serif"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"/>
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:drawableLeft="@drawable/ic_baseline_email"
+                    android:drawableTint="@color/SlateGray"
+                    android:drawablePadding="16sp"
+                    android:singleLine="true"
+                    android:hint="Email"
+                    android:textSize="@dimen/defaultEditTextSize"
+                    android:id="@+id/edEmail"
+                    android:fontFamily="sans-serif"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"/>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputMobileNumber"
-                    android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/edMobileNumber"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
+                    android:drawableLeft="@drawable/ic_baseline_phone_iphone"
+                    android:drawablePadding="16sp"
+                    android:drawableTint="@color/SlateGray"
+                    android:fontFamily="sans-serif"
+                    android:hint="Mobile Number"
+                    android:inputType="text"
+                    android:textSize="@dimen/defaultEditTextSize"
+                    android:maxLines="1"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true" />
 
-                    <EditText
-                        android:id="@+id/edMobileNumber"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_baseline_phone_iphone"
-                        android:drawablePadding="16sp"
-                        android:drawableTint="@color/SlateGray"
-                        android:fontFamily="sans-serif"
-                        android:hint="Mobile Number"
-                        android:inputType="text"
-                        android:textSize="@dimen/defaultEditTextSize"
-                        android:maxLines="1"
-                        android:singleLine="true" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputPassword"
-                    android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/signup_text_margin_top">
-                    <EditText
-                        android:id="@+id/edPassword"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_baseline_vpn_key"
-                        android:drawableTint="@color/SlateGray"
-                        android:drawablePadding="16sp"
-                        android:singleLine="true"
-                        android:hint="Password"
-                        android:textSize="@dimen/defaultEditTextSize"
-                        android:fontFamily="sans-serif"
-                        android:inputType="textPassword"
-                        android:maxLines="1"/>
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:drawableLeft="@drawable/ic_baseline_vpn_key"
+                    android:drawableTint="@color/SlateGray"
+                    android:drawablePadding="16sp"
+                    android:singleLine="true"
+                    android:hint="Password"
+                    android:textSize="@dimen/defaultEditTextSize"
+                    android:fontFamily="sans-serif"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"/>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputConfirmPassword"
-                    android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/edConfirmPassword"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/signup_text_margin_top">
-                    <EditText
-                        android:id="@+id/edConfirmPassword"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_baseline_vpn_key"
-                        android:drawableTint="@color/SlateGray"
-                        android:drawablePadding="16sp"
-                        android:singleLine="true"
-                        android:hint="Confirm Password"
-                        android:textSize="@dimen/defaultEditTextSize"
-                        android:fontFamily="sans-serif"
-                        android:inputType="textPassword"
-                        android:maxLines="1"/>
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:drawableLeft="@drawable/ic_baseline_vpn_key"
+                    android:drawableTint="@color/SlateGray"
+                    android:drawablePadding="16sp"
+                    android:singleLine="true"
+                    android:hint="Confirm Password"
+                    android:textSize="@dimen/defaultEditTextSize"
+                    android:fontFamily="sans-serif"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"/>
 
                 <ImageView
                     android:id="@+id/bRegister"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_login_button"
+                    android:layout_marginTop="15dp"
                     android:layout_gravity="right"/>
             </LinearLayout>
         </RelativeLayout>
