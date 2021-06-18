@@ -17,8 +17,10 @@ import com.ngurah.finalproject.R;
 import com.ngurah.finalproject.model.user.User;
 import com.ngurah.finalproject.model.user.UserRegister;
 import com.ngurah.finalproject.network.BaseApiService;
+import com.ngurah.finalproject.network.RetrofitInstance;
 import com.ngurah.finalproject.rest.ApiAuthInterface;
 import com.ngurah.finalproject.rest.ApiClient;
+import com.ngurah.finalproject.session.MySession;
 
 import java.util.ArrayList;
 
@@ -37,21 +39,14 @@ public class RegisterActivity extends AppCompatActivity {
     private Boolean CheckPasswordConfirm;
     private static int SPLASH_TIME_OUT = 2000;
 
-
 //    ApiAuthInterface authInterface;
     private BaseApiService baseApiService;
+    private MySession session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        tvLogin = findViewById(R.id.tvLogin);
-        tvLogin.setOnClickListener(v -> {
-            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(i);
-            finish();
-        });
 
 
         edFirstName = findViewById(R.id.edFirstName);
@@ -62,35 +57,19 @@ public class RegisterActivity extends AppCompatActivity {
         edConfirmPassword = findViewById(R.id.edConfirmPassword);
         edMobileNumber = findViewById(R.id.edMobileNumber);
         bRegister = findViewById(R.id.bRegister);
-        baseApiService = ApiClient.getClient().create(BaseApiService.class);
+
+        tvLogin = findViewById(R.id.tvLogin);
+        tvLogin.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(i);
+            finish();
+        });
+
+//        session = new MySession(RegisterActivity.this);
+//        baseApiService = RetrofitInstance.getRetrofitInstance("").create(BaseApiService.class);
+//        baseApiService = ApiClient.getClient().create(BaseApiService.class);
 
         bRegister.setOnClickListener(v -> cekRegister());
-
-//        bRegister.setOnClickListener(v ->{
-//            ArrayList<String> Role = new ArrayList<>();
-//            Role.add("user");
-//            UserRegister userRegister = new UserRegister(edEmail.getText().toString(),edFirstName.getText().toString(),edLastName.getText().toString(),
-//                    edMobileNumber.getText().toString(),edPassword.getText().toString(),Role);
-//            Call<User> userCall = baseApiService.register(userRegister);
-//            userCall.enqueue(new Callback<User>() {
-//
-//                @Override
-//                public void onResponse(Call<User> call, Response<User> response) {
-//                    User responRegister = response.body();
-//                    Log.d("RegisterLog", String.valueOf(response.code()));
-//                    if(responRegister != null){
-//                        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-//                        startActivity(i);
-//                    }else{
-//                        Toast.makeText(RegisterActivity.this, "Data Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//                @Override
-//                public void onFailure(Call<User> call, Throwable t) {
-//                    Toast.makeText(RegisterActivity.this, " Koneksi anda Buruk", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//        });
 
 
     }
@@ -98,10 +77,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void cekRegister(){
         CheckEditTextIsEmptyOrNot();
-        CheckPasswordConfirm();
         if(!CheckPasswordConfirm) {
             Toast.makeText(RegisterActivity.this,"Password yang diisi tidak sama",Toast.LENGTH_LONG).show();
         }
+
+        CheckPasswordConfirm();
         if(CheckEditText){
             SyncCek();
         }else{
