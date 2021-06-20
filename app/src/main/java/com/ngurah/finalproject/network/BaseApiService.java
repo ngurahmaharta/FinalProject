@@ -6,7 +6,9 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
-import com.ngurah.finalproject.model.bus.Bus;
+import com.ngurah.finalproject.model.trip.Bus;
+import com.ngurah.finalproject.model.trip.Trip;
+import com.ngurah.finalproject.model.trip.TripSchedule;
 import com.ngurah.finalproject.model.user.ResponseUser;
 import com.ngurah.finalproject.model.user.UserRegister;
 import com.ngurah.finalproject.model.user.User;
@@ -23,6 +25,12 @@ public interface BaseApiService {
 
     @GET("bus")
     Call<List<Bus>> getAllBus();
+
+    @GET("tripSchedule")
+    Call<TripSchedule> getTripSchedule();
+
+    @GET("trip")
+    Call<List<Trip>> getTripList();
 
 
 

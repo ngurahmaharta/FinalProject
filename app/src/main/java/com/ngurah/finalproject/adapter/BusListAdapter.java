@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 import com.ngurah.finalproject.R;
-import com.ngurah.finalproject.model.bus.Bus;
+import com.ngurah.finalproject.model.trip.Bus;
 
 public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.MyViewHolder>{
 
@@ -28,7 +28,7 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.MyViewHo
 
     @Override
     public BusListAdapter.MyViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.bus_list_item, parent, false);
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_bus, parent, false);
         return new MyViewHolder(mView);
     }
 

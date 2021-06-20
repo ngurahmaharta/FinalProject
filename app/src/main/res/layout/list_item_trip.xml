@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shape_card_radius_white"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="iconCard"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_bus_illustration" />
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvCodeBus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bus K8"
+            android:drawableLeft="@drawable/ic_baseline_directions_bus"
+            android:textColor="@color/primaryTextColor"
+            android:drawableTint="@color/primaryTextColor"
+            android:drawablePadding="@dimen/defaultEditTextSize"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvSourceStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source Stop"
+                android:drawableLeft="@drawable/ic_baseline_location_on"
+                android:drawablePadding="@dimen/defaultEditTextSize"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:drawableTint="@color/primaryTextColor"
+                android:textColor="@color/primaryTextColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textSize="18sp"
+                android:layout_marginHorizontal="8dp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvDestinationStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="destination Stop"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryTextColor"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 menit"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_baseline_access_time"
+            android:drawablePadding="@dimen/defaultEditTextSize"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvAgency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_account_balance"
+            android:drawablePadding="@dimen/defaultEditTextSize"
+            android:text="Nama Agency"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvFare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp. 40.000"
+            android:drawableLeft="@drawable/ic_baseline_monetization_on"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:drawableTint="@color/design_default_color_secondary"
+            android:drawablePadding="@dimen/defaultEditTextSize"
+            android:textColor="@color/design_default_color_secondary"/>
+    </LinearLayout>
+</RelativeLayout>

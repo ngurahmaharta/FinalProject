@@ -13,10 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ngurah.finalproject.R;
 import com.ngurah.finalproject.adapter.BusListAdapter;
-import com.ngurah.finalproject.model.bus.Bus;
+import com.ngurah.finalproject.model.trip.Bus;
 import com.ngurah.finalproject.network.BaseApiService;
 import com.ngurah.finalproject.network.RetrofitInstance;
+import com.ngurah.finalproject.session.MySession;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -31,6 +33,7 @@ public class BusFragment extends Fragment {
     private TextView tInternetHilang;
     private RecyclerView.Adapter mBusAdapter;
     private RecyclerView.LayoutManager mBusLayoutManager;
+    private MySession session;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -40,10 +43,14 @@ public class BusFragment extends Fragment {
 
         tInternetHilang = root.findViewById(R.id.internet_hilang);
 
+        session = new MySession(getActivity());
+        HashMap<String, String> sUsernya = session.getUserDetails();
+        String key = sUsernya.get(MySession.KEY_TOKEN);
+
         rvListBus = root.findViewById(R.id.listBus);
         mBusLayoutManager = new LinearLayoutManager(getContext());
         rvListBus.setLayoutManager(mBusLayoutManager);
-        baseApiService = RetrofitInstance.getRetrofitInstance("").create(BaseApiService.class);
+        baseApiService = RetrofitInstance.getRetrofitInstance(""+key).create(BaseApiService.class);
 
         loadDataBus();
 

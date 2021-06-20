@@ -1,4 +1,4 @@
-package com.ngurah.finalproject.model.agency;
+package com.ngurah.finalproject.model.trip;
 
 import com.google.gson.annotations.SerializedName;
 

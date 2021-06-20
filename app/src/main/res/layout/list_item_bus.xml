@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:drawableLeft="@drawable/ic_baseline_directions_bus"
+            android:drawablePadding="@dimen/defaultEditTextSize"
             android:text="Bus Code"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:drawableLeft="@drawable/ic_baseline_airline_seat_recline_normal"
+            android:drawablePadding="@dimen/defaultEditTextSize"
             android:text="Capacity person"
             android:textStyle="bold"
             android:textColor="#3A3A3A"/>
@@ -48,6 +50,7 @@
             android:layout_height="0dp"
             android:text="[Code] Agency Name"
             android:drawableLeft="@drawable/ic_baseline_account_balance"
+            android:drawablePadding="@dimen/defaultEditTextSize"
             android:textColor="#454545"/>
     </LinearLayout>
 </LinearLayout>

@@ -1,7 +1,6 @@
-package com.ngurah.finalproject.model.bus;
+package com.ngurah.finalproject.model.trip;
 
 import com.google.gson.annotations.SerializedName;
-import com.ngurah.finalproject.model.agency.Agency;
 
 public class Bus {
     @SerializedName("id")
