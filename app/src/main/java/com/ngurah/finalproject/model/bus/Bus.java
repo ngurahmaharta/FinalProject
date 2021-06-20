@@ -31,9 +31,7 @@ public class Bus {
         this.code = code;
     }
 
-    public Integer getCapacity() {
-        return capacity;
-    }
+    public Integer getCapacity() { return capacity; }
 
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;

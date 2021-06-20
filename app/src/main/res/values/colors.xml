@@ -168,6 +168,19 @@
 
 
 
+    <color name="base_color">#F8F9FD</color>
+    <color name="dark_base_700">#373B61</color>
+    <color name="dark_base_500">#43466F</color>
+    <color name="light_base_200">#A7D5E5</color>
+    <color name="soft_blue">#B5BDE4</color>
+    <color name="text_color">#3C3B5D</color>
+    <color name="grey">#D2D2D2</color>
+    <color name="accent">#ED683B</color>
+    <color name="base_accent">#FCEFE9</color>
+    <color name="back_base">#EDEFFE</color>
+
+
+
 
 
 </resources>

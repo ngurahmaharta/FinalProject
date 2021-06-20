@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="6dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvIdBus"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:text="01"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textSize="28sp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvCodeBus"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:drawableLeft="@drawable/ic_baseline_directions_bus"
+            android:text="Bus Code"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"/>
+        <TextView
+            android:id="@+id/tvCapacity"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:drawableLeft="@drawable/ic_baseline_airline_seat_recline_normal"
+            android:text="Capacity person"
+            android:textStyle="bold"
+            android:textColor="#3A3A3A"/>
+
+        <TextView
+            android:id="@+id/tvAgency"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="[Code] Agency Name"
+            android:drawableLeft="@drawable/ic_baseline_account_balance"
+            android:textColor="#454545"/>
+    </LinearLayout>
+</LinearLayout>
