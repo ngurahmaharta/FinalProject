@@ -105,41 +105,32 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         //Button Login
-        bLogin.setOnClickListener(view -> cekLoginTwo());
+        bLogin.setOnClickListener(view -> cekLogin());
 
-        //Register
-//        tvRegister.setOnClickListener(v -> cekRegister());
     }
-
-//    private void cekRegister() {
-//
-//    }
 
     //Check Edit Text
     public void CheckEditTextIsEmptyOrNot(){
         EmailHolder = edUser.getText().toString();
         PasswordHolder = edPass.getText().toString();
-        if(TextUtils.isEmpty(EmailHolder) || TextUtils.isEmpty(PasswordHolder)){
-            CheckEditText = false;
-        }else {
-            CheckEditText = true ;
-        }
+
+        CheckEditText = !TextUtils.isEmpty(EmailHolder) && !TextUtils.isEmpty(PasswordHolder);
     }
 
     //Jika Edit Text Terisi
-    private void cekLoginTwo(){
+    private void cekLogin(){
         CheckEditTextIsEmptyOrNot();
         if(CheckEditText){
             SyncCek();
         }else {
-            Toast.makeText(LoginActivity.this, "Data Masih Kosong !", Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this, "Lengkapi email dan password!", Toast.LENGTH_LONG).show();
         }
     }
 
     //Loading
     private void SyncCek() {
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-        progressDialog.setMessage("Please Wait...");
+        progressDialog.setMessage("Mohon menunggu...");
         progressDialog.show();
 
         new Thread(){
@@ -147,7 +138,7 @@ public class LoginActivity extends AppCompatActivity {
             public void run() {
                 super.run();
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                     if (progressDialog.isShowing()) progressDialog.dismiss();
                     callValidateTrue();
                 } catch (InterruptedException e) {

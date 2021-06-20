@@ -1,11 +1,11 @@
 package com.ngurah.finalproject.controller;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.EditText;
@@ -18,9 +18,6 @@ import com.ngurah.finalproject.model.user.User;
 import com.ngurah.finalproject.model.user.UserRegister;
 import com.ngurah.finalproject.network.BaseApiService;
 import com.ngurah.finalproject.network.RetrofitInstance;
-import com.ngurah.finalproject.rest.ApiAuthInterface;
-import com.ngurah.finalproject.rest.ApiClient;
-import com.ngurah.finalproject.session.MySession;
 
 import java.util.ArrayList;
 
@@ -37,17 +34,13 @@ public class RegisterActivity extends AppCompatActivity {
     private ImageView bRegister;
     private Boolean CheckEditText;
     private Boolean CheckPasswordConfirm;
-    private static int SPLASH_TIME_OUT = 2000;
 
-//    ApiAuthInterface authInterface;
     private BaseApiService baseApiService;
-    private MySession session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
 
         edFirstName = findViewById(R.id.edFirstName);
         edLastName = findViewById(R.id.edLastName);
@@ -65,27 +58,32 @@ public class RegisterActivity extends AppCompatActivity {
             finish();
         });
 
-//        session = new MySession(RegisterActivity.this);
-//        baseApiService = RetrofitInstance.getRetrofitInstance("").create(BaseApiService.class);
-//        baseApiService = ApiClient.getClient().create(BaseApiService.class);
+//        baseApiService = ApiClient.getClient("").create(BaseApiService.class);
+        baseApiService = RetrofitInstance.getRetrofitInstance("").create(BaseApiService.class);
 
         bRegister.setOnClickListener(v -> cekRegister());
-
-
     }
 
-
     private void cekRegister(){
-        CheckEditTextIsEmptyOrNot();
-        if(!CheckPasswordConfirm) {
-            Toast.makeText(RegisterActivity.this,"Password yang diisi tidak sama",Toast.LENGTH_LONG).show();
-        }
-
         CheckPasswordConfirm();
-        if(CheckEditText){
-            SyncCek();
-        }else{
+        CheckEditTextIsEmptyOrNot();
+
+        if(!CheckEditText){
             Toast.makeText(RegisterActivity.this,"Data Masih Kosong !",Toast.LENGTH_LONG).show();
+        } else{
+            if(!CheckPasswordConfirm) {
+                Toast.makeText(RegisterActivity.this,"Password yang diisi tidak sama",Toast.LENGTH_LONG).show();
+            } else{
+                SyncCek();
+            }
+        }
+    }
+
+    private void CheckPasswordConfirm(){
+        if(edPassword.getText().toString().equals(edConfirmPassword.getText().toString())){
+            CheckPasswordConfirm = true;
+        } else {
+            CheckPasswordConfirm = false;
         }
     }
 
@@ -101,16 +99,6 @@ public class RegisterActivity extends AppCompatActivity {
             CheckEditText = false;
         } else {
             CheckEditText = true;
-        }
-    }
-
-    private void CheckPasswordConfirm(){
-        PasswordHolder = edPassword.getText().toString();
-        ConfirmPasswordHolder = edConfirmPassword.getText().toString();
-        if(TextUtils.isEmpty(PasswordHolder) == TextUtils.isEmpty(ConfirmPasswordHolder)){
-            CheckPasswordConfirm = true;
-        } else {
-            CheckPasswordConfirm = false;
         }
     }
 
@@ -132,6 +120,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }.start();
     }
+
     private void RegisterTrue(){
         ArrayList<String> Role = new ArrayList<>();
         Role.add("user");
@@ -152,27 +141,23 @@ public class RegisterActivity extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, " Koneksi anda Buruk", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Registrasi gagal, periksa koneksi anda!", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-
     protected void Sukses(){
-        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-        startActivity(i);
-        finish();
+        final AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+        builder.setTitle("Info");
+        builder.setMessage("Registrasi berhasil!");
+        builder.setPositiveButton("Ok", (dialog, which) -> {
+            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(i);
+            finish();
+        });
 
-//        setContentView(R.layout.sukses_register);
-//        new Handler().postDelayed((Runnable) () -> {
-//
-//            Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
-//            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            startActivity(i);
-//            finish();
-//
-//        }, SPLASH_TIME_OUT);
+        builder.setCancelable(false);
+        builder.show();
     }
 
 }

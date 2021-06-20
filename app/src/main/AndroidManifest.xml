@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:usesCleartextTraffic="true">
         <activity android:name=".controller.RegisterActivity" android:theme="@style/LoginTheme"/>
         <activity android:name=".controller.LoginActivity" android:theme="@style/LoginTheme"/>

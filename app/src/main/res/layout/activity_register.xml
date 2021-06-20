@@ -84,65 +84,84 @@
                         android:maxLines="1"/>
                 </LinearLayout>
 
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_email"
-                    android:drawableTint="@color/SlateGray"
-                    android:drawablePadding="16sp"
-                    android:singleLine="true"
-                    android:hint="Email"
-                    android:textSize="@dimen/defaultEditTextSize"
-                    android:id="@+id/edEmail"
-                    android:fontFamily="sans-serif"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginTop="5dp"
-                    android:maxLines="1"/>
 
-                <EditText
-                    android:id="@+id/edMobileNumber"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_phone_iphone"
-                    android:drawablePadding="16sp"
-                    android:drawableTint="@color/SlateGray"
-                    android:fontFamily="sans-serif"
-                    android:hint="Mobile Number"
-                    android:inputType="text"
-                    android:textSize="@dimen/defaultEditTextSize"
-                    android:maxLines="1"
-                    android:layout_marginTop="5dp"
-                    android:singleLine="true" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_email"
+                        android:drawableTint="@color/SlateGray"
+                        android:drawablePadding="16sp"
+                        android:singleLine="true"
+                        android:hint="Email"
+                        android:textSize="@dimen/defaultEditTextSize"
+                        android:id="@+id/edEmail"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textEmailAddress"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/edPassword"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_vpn_key"
-                    android:drawableTint="@color/SlateGray"
-                    android:drawablePadding="16sp"
-                    android:singleLine="true"
-                    android:hint="Password"
-                    android:textSize="@dimen/defaultEditTextSize"
-                    android:fontFamily="sans-serif"
-                    android:inputType="textPassword"
-                    android:layout_marginTop="5dp"
-                    android:maxLines="1"/>
 
-                <EditText
-                    android:id="@+id/edConfirmPassword"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_vpn_key"
-                    android:drawableTint="@color/SlateGray"
-                    android:drawablePadding="16sp"
-                    android:singleLine="true"
-                    android:hint="Confirm Password"
-                    android:textSize="@dimen/defaultEditTextSize"
-                    android:fontFamily="sans-serif"
-                    android:inputType="textPassword"
-                    android:layout_marginTop="5dp"
-                    android:maxLines="1"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edMobileNumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_phone_iphone"
+                        android:drawablePadding="16sp"
+                        android:drawableTint="@color/SlateGray"
+                        android:fontFamily="sans-serif"
+                        android:hint="Mobile Number"
+                        android:inputType="text"
+                        android:textSize="@dimen/defaultEditTextSize"
+                        android:maxLines="1"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edPassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_vpn_key"
+                        android:drawableTint="@color/SlateGray"
+                        android:drawablePadding="16sp"
+                        android:singleLine="true"
+                        android:hint="Password"
+                        android:textSize="@dimen/defaultEditTextSize"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textPassword"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edConfirmPassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_vpn_key"
+                        android:drawableTint="@color/SlateGray"
+                        android:drawablePadding="16sp"
+                        android:singleLine="true"
+                        android:hint="Confirm Password"
+                        android:textSize="@dimen/defaultEditTextSize"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textPassword"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <ImageView
                     android:id="@+id/bRegister"

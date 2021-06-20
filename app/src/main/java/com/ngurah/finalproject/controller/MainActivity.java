@@ -1,18 +1,14 @@
 package com.ngurah.finalproject.controller;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ngurah.finalproject.R;
-import com.ngurah.finalproject.controller.ui.agency.AgencyFragment;
+import com.ngurah.finalproject.controller.ui.ticket.TicketFragment;
 import com.ngurah.finalproject.controller.ui.bus.BusFragment;
 import com.ngurah.finalproject.controller.ui.home.HomeFragment;
 import com.ngurah.finalproject.controller.ui.profile.ProfileFragment;
@@ -41,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new ProfileFragment();
             }else if (id == R.id.tab_bus){
                 fragment = new BusFragment();
-            }else if (id == R.id.tab_agency){
-                fragment = new AgencyFragment();
+            }else if (id == R.id.tab_ticket){
+                fragment = new TicketFragment();
             }
             return loadFragment(fragment);
         });
@@ -59,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+
+
 
     private void callIntent(Class act){
         Intent i = new Intent(getApplicationContext(), act);
@@ -87,45 +86,40 @@ public class MainActivity extends AppCompatActivity {
 //        return  MainActivity.super.onOptionsItemSelected(item);
 //    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case android.R.id.home:
+//                onBackPressed();
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+//    private void nampilExit(){
+//        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//        builder.setTitle("Information");
+//        builder.setMessage("Apakah anda yakin ingin menutup aplikasi ini?");
+//        builder.setPositiveButton("Ya",
+//                new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        mySession.logoutUser();
+//
+//                        Intent i = new Intent(MainActivity.this, SplashActivity.class);
+//                        finish();
+//                    }
+//                });
+//
+//        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//            }
+//        });
+//        builder.setCancelable(false);
+//        builder.show();
+//    }
 
 
-
-    private void nampilExit(){
-        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Information");
-        builder.setMessage("Apakah anda yakin ingin menutup aplikasi ini?");
-        builder.setPositiveButton("Ya",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        mySession.logoutUser();
-
-                        Intent i = new Intent(MainActivity.this, SplashActivity.class);
-                        finish();
-                    }
-                });
-
-        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        builder.setCancelable(false);
-        builder.show();
-    }
 }

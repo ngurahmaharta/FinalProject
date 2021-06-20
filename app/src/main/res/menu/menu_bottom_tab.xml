@@ -15,10 +15,11 @@
         app:showAsAction="always|withText"/>
 
     <item
-        android:id="@+id/tab_agency"
-        android:title="Agency"
-        android:icon="@drawable/ic_baseline_business_center"
+        android:id="@+id/tab_ticket"
+        android:title="Ticket"
+        android:icon="@drawable/ic_baseline_receipt"
         app:showAsAction="always|withText"/>
+
     <item
         android:id="@+id/tab_profile"
         android:title="Profile"
