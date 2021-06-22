@@ -7,6 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 import com.ngurah.finalproject.model.trip.Bus;
+import com.ngurah.finalproject.model.trip.Stop;
 import com.ngurah.finalproject.model.trip.Ticket;
 import com.ngurah.finalproject.model.trip.Trip;
 import com.ngurah.finalproject.model.trip.TripSchedule;
@@ -33,11 +34,11 @@ public interface BaseApiService {
     @GET("trip")
     Call<List<Trip>> getTripList();
 
-    //get all stop
-    //get all ticket
-
     @GET("ticket")
     Call<List<Ticket>> getTicketList();
+
+    @GET("stop")
+    Call<List<Stop>> getStopList();
 
 
 

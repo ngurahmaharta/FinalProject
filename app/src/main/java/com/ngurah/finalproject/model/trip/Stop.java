@@ -2,6 +2,8 @@ package com.ngurah.finalproject.model.trip;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Stop {
     @SerializedName("id")
     public int id;

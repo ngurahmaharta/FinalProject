@@ -7,4 +7,8 @@
     <string name="password_not_match">Password does not match</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="list_stop">
+        <item>Pilih salah satu</item>
+    </string-array>
 </resources>

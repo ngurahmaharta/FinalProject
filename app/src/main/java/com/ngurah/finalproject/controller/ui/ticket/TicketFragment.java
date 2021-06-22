@@ -59,7 +59,6 @@ public class TicketFragment extends Fragment {
     }
 
     private void loadDataTicket() {
-        HashMap<String, String> sUsernya = session.getUserDetails();
         Call<List<Ticket>> listCall = baseApiService.getTicketList();
         listCall.enqueue(new Callback<List<Ticket>>() {
             @Override

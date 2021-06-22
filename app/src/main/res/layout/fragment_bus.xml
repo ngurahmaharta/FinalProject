@@ -73,7 +73,7 @@
                         android:focusable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lebak Bulus"
+                        android:text="Harmoni"
                         android:drawableLeft="@drawable/ic_baseline_location_on"
                         android:drawableTint="@color/dark_base_700"
                         android:drawablePadding="12dp"/>
