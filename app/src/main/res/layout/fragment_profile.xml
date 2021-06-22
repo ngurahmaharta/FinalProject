@@ -12,20 +12,20 @@
         <RelativeLayout style="@style/loginParent">
 
             <LinearLayout
+                android:id="@+id/layContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:background="@drawable/profile_bk"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:id="@+id/layContent"
-                android:background="@drawable/profile_bk">
+                android:paddingHorizontal="20dp">
 
                 <ImageView
-                    android:paddingTop="40dp"
-                    android:paddingBottom="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="160dp"
-                    android:src="@drawable/profile_round"/>
+                    android:paddingTop="40dp"
+                    android:paddingBottom="20dp"
+                    android:src="@drawable/profile_round" />
 
                 <TextView
                     android:id="@+id/tvFullName"
@@ -47,10 +47,94 @@
                     android:id="@+id/tvMobileNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
                     android:text="0871 2345 6789"
                     android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="50dp"/>
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/WhiteSmoke">
+
+                    <TextView
+                        android:id="@+id/tvUbahDataDiri"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+                        android:drawableTint="@color/DarkGray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Ubah Data Diri"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/WhiteSmoke">
+
+                    <TextView
+                        android:id="@+id/tvUbahKataSandi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+                        android:drawableTint="@color/DarkGray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Ubah Kata Sandi"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/WhiteSmoke">
+
+                    <TextView
+                        android:id="@+id/tvPusatBantuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+                        android:drawableTint="@color/DarkGray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Pusat Bantuan"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/WhiteSmoke">
+
+                    <TextView
+                        android:id="@+id/tvPengaturan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+                        android:drawableTint="@color/DarkGray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Pengaturan"
+                        android:textColor="@color/DarkGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <Button
                     android:id="@+id/bLogout"
@@ -59,11 +143,10 @@
                     android:layout_marginHorizontal="60dp"
                     android:layout_marginVertical="10dp"
                     android:background="@drawable/rounded_button"
+                    android:text="Log out"
                     android:textColor="@color/White"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:text="Log out"
-                    />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

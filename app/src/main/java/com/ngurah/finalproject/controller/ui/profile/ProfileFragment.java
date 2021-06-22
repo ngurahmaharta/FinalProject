@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import com.ngurah.finalproject.R;
+import com.ngurah.finalproject.controller.ComingSoonActivity;
 import com.ngurah.finalproject.controller.LoginActivity;
 import com.ngurah.finalproject.network.BaseApiService;
 import com.ngurah.finalproject.network.RetrofitInstance;
@@ -31,7 +32,8 @@ public class ProfileFragment extends Fragment {
 //    private MyUtils customUtils;
 
     private Button bLogout;
-    private TextView tvFullName, tvEmail, tvMobileNumber;
+    private TextView tvFullName, tvEmail, tvMobileNumber, tvUbahDataDiri, tvUbahKataSandi, tvPusatBantuan, tvPengaturan;
+    private Intent i;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -43,8 +45,7 @@ public class ProfileFragment extends Fragment {
 
         getUserProfile();
 
-        bLogout = root.findViewById(R.id.bLogout);
-        bLogout.setOnClickListener(v -> logout());
+        listener();
 
         return root;
     }
@@ -92,6 +93,37 @@ public class ProfileFragment extends Fragment {
         tvFullName.setText(sFullName);
         tvEmail.setText(sEmail);
         tvMobileNumber.setText(sMobileNumber);
+    }
+
+    private void listener(){
+
+        bLogout = root.findViewById(R.id.bLogout);
+        bLogout.setOnClickListener(v -> logout());
+
+        tvUbahDataDiri = root.findViewById(R.id.tvUbahDataDiri);
+        tvUbahDataDiri.setOnClickListener(v -> {
+            i = new Intent(getActivity(), ComingSoonActivity.class);
+            startActivity(i);
+        });
+
+        tvUbahKataSandi = root.findViewById(R.id.tvUbahKataSandi);
+        tvUbahKataSandi.setOnClickListener(v -> {
+            i = new Intent(getActivity(), ComingSoonActivity.class);
+            startActivity(i);
+        });
+
+        tvPusatBantuan = root.findViewById(R.id.tvPusatBantuan);
+        tvPusatBantuan.setOnClickListener(v -> {
+            i = new Intent(getActivity(), ComingSoonActivity.class);
+            startActivity(i);
+        });
+
+        tvPengaturan = root.findViewById(R.id.tvPengaturan);
+        tvPengaturan.setOnClickListener(v -> {
+            i = new Intent(getActivity(), ComingSoonActivity.class);
+            startActivity(i);
+        });
+
     }
 
 }
