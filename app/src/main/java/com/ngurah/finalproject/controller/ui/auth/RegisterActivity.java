@@ -1,4 +1,4 @@
-package com.ngurah.finalproject.controller;
+package com.ngurah.finalproject.controller.ui.auth;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;

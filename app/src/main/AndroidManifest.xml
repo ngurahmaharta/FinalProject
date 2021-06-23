@@ -12,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
         android:usesCleartextTraffic="true">
-        <activity android:name=".controller.ComingSoonActivity"></activity>
+        <activity android:name=".controller.ui.home.BookingActivity"></activity>
+        <activity android:name=".controller.ui.auth.ChangePasswordActivity" />
+        <activity android:name=".controller.ComingSoonActivity" />
         <activity
-            android:name=".controller.RegisterActivity"
+            android:name=".controller.ui.auth.RegisterActivity"
             android:theme="@style/LoginTheme" />
         <activity
-            android:name=".controller.LoginActivity"
+            android:name=".controller.ui.auth.LoginActivity"
             android:theme="@style/LoginTheme" />
         <activity android:name=".controller.MainActivity" />
         <activity

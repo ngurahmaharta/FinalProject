@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:scrollbarAlwaysDrawVerticalTrack="true"
     android:background="@color/white"
-    tools:context=".controller.LoginActivity">
+    tools:context=".controller.ui.auth.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -39,6 +39,8 @@ public class TicketFragment extends Fragment {
     private RecyclerView.Adapter mTicketAdapter;
     private RecyclerView.LayoutManager mTicketLayoutManager;
 
+    private String userId;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -47,6 +49,7 @@ public class TicketFragment extends Fragment {
         session = new MySession(getActivity());
         HashMap<String, String> sUsernya = session.getUserDetails();
         String key = sUsernya.get(MySession.KEY_TOKEN);
+        userId = sUsernya.get(MySession.KEY_ID);
 
         rvListTicket = root.findViewById(R.id.rvListTicket);
         mTicketLayoutManager =new LinearLayoutManager(getActivity());
@@ -59,12 +62,12 @@ public class TicketFragment extends Fragment {
     }
 
     private void loadDataTicket() {
-        Call<List<Ticket>> listCall = baseApiService.getTicketList();
+//        Call<List<Ticket>> listCall = baseApiService.getTicketList();
+        Call<List<Ticket>> listCall = baseApiService.getTickets(userId);
         listCall.enqueue(new Callback<List<Ticket>>() {
             @Override
             public void onResponse(Call<List<Ticket>> call, Response<List<Ticket>> response) {
                 List<Ticket> ticketList = response.body();
-                Log.d("tests", String.valueOf(response.code()));
                 mTicketAdapter = new TicketListAdapter(ticketList,getContext());
                 rvListTicket.setAdapter(mTicketAdapter);
             }

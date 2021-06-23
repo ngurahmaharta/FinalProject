@@ -9,4 +9,7 @@
         android:bottom="8dp"
         android:left="10dp"
         android:right="10dp"/>
+    <item android:state_activated="true">
+        <color android:color="@color/black" />
+    </item>
 </shape>

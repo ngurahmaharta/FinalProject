@@ -4,29 +4,32 @@ import com.google.gson.annotations.SerializedName;
 
 public class TripSchedule {
     @SerializedName("id")
-    public int id;
+    private Integer id;
+
     @SerializedName("tripDate")
-    public String tripDate;
+    private String tripDate;
+
     @SerializedName("availableSeats")
-    public int availableSeats;
+    private Integer availableSeats;
+
     @SerializedName("tripDetail")
-    public Trip tripDetail;
+    private Trip tripDetail;
 
     public TripSchedule() {
     }
 
-    public TripSchedule(int id, String tripDate, int availableSeats, Trip tripDetail) {
+    public TripSchedule(Integer id, String tripDate, Integer availableSeats, Trip tripDetail) {
         this.id = id;
         this.tripDate = tripDate;
         this.availableSeats = availableSeats;
         this.tripDetail = tripDetail;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,11 +41,11 @@ public class TripSchedule {
         this.tripDate = tripDate;
     }
 
-    public int getAvailableSeats() {
+    public Integer getAvailableSeats() {
         return availableSeats;
     }
 
-    public void setAvailableSeats(int availableSeats) {
+    public void setAvailableSeats(Integer availableSeats) {
         this.availableSeats = availableSeats;
     }
 

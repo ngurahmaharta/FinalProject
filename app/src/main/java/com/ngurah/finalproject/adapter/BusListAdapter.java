@@ -34,7 +34,7 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull BusListAdapter.MyViewHolder holder, int position) {
-        holder.id.setText(String.valueOf(busList.get(position).getId()));
+//        holder.id.setText(String.valueOf(busList.get(position).getId()));
         holder.code.setText(busList.get(position).getCode());
         holder.capacity.setText(String.valueOf(busList.get(position).getCapacity()) + " kursi");
 //        holder.agency.setText(busList.get(position).getAgency().getName());
@@ -50,7 +50,7 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.MyViewHo
         public TextView id,code,capacity,agency;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            id = itemView.findViewById(R.id.tvIdBus);
+//            id = itemView.findViewById(R.id.tvIdBus);
             code = itemView.findViewById(R.id.tvCodeBus);
             capacity = itemView.findViewById(R.id.tvCapacity);
             agency = itemView.findViewById(R.id.tvAgency);

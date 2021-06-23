@@ -1,4 +1,4 @@
-package com.ngurah.finalproject.controller;
+package com.ngurah.finalproject.controller.ui.auth;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ngurah.finalproject.R;
+import com.ngurah.finalproject.controller.MainActivity;
 import com.ngurah.finalproject.model.user.ResponseUser;
 import com.ngurah.finalproject.model.user.User;
 import com.ngurah.finalproject.network.BaseApiService;

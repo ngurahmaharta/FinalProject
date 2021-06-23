@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-import com.ngurah.finalproject.controller.LoginActivity;
+import com.ngurah.finalproject.controller.ui.auth.LoginActivity;
 
 import java.util.HashMap;
 

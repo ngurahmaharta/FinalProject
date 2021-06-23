@@ -14,11 +14,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import com.ngurah.finalproject.R;
 import com.ngurah.finalproject.controller.ComingSoonActivity;
-import com.ngurah.finalproject.controller.LoginActivity;
+import com.ngurah.finalproject.controller.ui.auth.LoginActivity;
 import com.ngurah.finalproject.network.BaseApiService;
 import com.ngurah.finalproject.network.RetrofitInstance;
 import com.ngurah.finalproject.session.MySession;
-import com.ngurah.finalproject.utils.MyUtils;
 
 import java.util.HashMap;
 

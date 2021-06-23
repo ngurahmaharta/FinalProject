@@ -9,7 +9,7 @@
     android:focusableInTouchMode="true"
     android:layout_gravity="center"
     android:background="@color/white"
-    tools:context=".controller.RegisterActivity">
+    tools:context=".controller.ui.auth.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

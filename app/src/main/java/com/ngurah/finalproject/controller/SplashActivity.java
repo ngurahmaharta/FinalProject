@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.ngurah.finalproject.R;
+import com.ngurah.finalproject.controller.ui.auth.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
