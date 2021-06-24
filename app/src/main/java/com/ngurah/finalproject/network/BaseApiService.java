@@ -41,12 +41,6 @@ public interface BaseApiService {
 
     @GET("ticket")
     Call<List<Ticket>> getTicketList();
-//
-//    @GET("tripSchedule")
-//    Call<List<TripSchedule>> getTripSchedules();
-//
-//    @GET("tripSchedule")
-//    Call<List<TripSchedule>> getTripSchedulesParam(@Query("destStopId") Integer destStopId, @Query("from") String from, @Query("sourceStopId") Integer sourceStopId, @Query("to") String to);
 
     @GET("ticket")
     Call<List<Ticket>> getTickets(@Query("passengerId") String id);
@@ -62,6 +56,9 @@ public interface BaseApiService {
 
     @GET("tripSchedule/{id}")
     Call<TripSchedule> getTripSchedule(@Path("id") String id);
+
+    @PUT("user/changePassword")
+    Call<User> changePassword(@Body ChangePasswordRequest changePasswordRequest);
 
 
 

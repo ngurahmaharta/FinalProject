@@ -13,7 +13,7 @@
         android:theme="@style/Theme.FinalProject"
         android:usesCleartextTraffic="true">
         <activity android:name=".controller.ui.home.BookingActivity"></activity>
-        <activity android:name=".controller.ui.auth.ChangePasswordActivity" />
+        <activity android:name=".controller.ui.profile.ChangePasswordActivity" />
         <activity android:name=".controller.ComingSoonActivity" />
         <activity
             android:name=".controller.ui.auth.RegisterActivity"

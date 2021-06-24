@@ -107,7 +107,8 @@ public class ProfileFragment extends Fragment {
 
         tvUbahKataSandi = root.findViewById(R.id.tvUbahKataSandi);
         tvUbahKataSandi.setOnClickListener(v -> {
-            i = new Intent(getActivity(), ComingSoonActivity.class);
+//            i = new Intent(getActivity(), ComingSoonActivity.class);
+            i = new Intent(getActivity(), ChangePasswordActivity.class);
             startActivity(i);
         });
 
