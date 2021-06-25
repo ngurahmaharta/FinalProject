@@ -10,3 +10,6 @@ password : password
 
 super : super@super.com
 password : password
+
+
+[APK Release](https://github.com/ngurahmaharta/FinalProject/blob/main/app/release/app-release.apk)
