@@ -2,13 +2,13 @@
 Final Project Java Android Bootcamp Hacktiv8
 
 Akses Login
-⋅⋅* email : admin@admin.com
+* email : admin@admin.com
 password : password
 
-⋅⋅* email : user@user.com
+* email : user@user.com
 password : password
 
-⋅⋅* super : super@super.com
+* email : super@super.com
 password : password
 
 
